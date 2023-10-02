@@ -1,59 +1,10 @@
 <!DOCTYPE html>
-<html>
-<style> 
-*{
-  margin: 0;
-  padding: 0;
-  border: box-sizing;
-  font-family: Berlin Sans Fb;
-}
-.header{
-  min-height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(aqua,palevioletred);
-}
-.header p{
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  padding-top:30px;
-}
-.calculator{
-  padding-top: 30px;
-  width: 350px;
-  margin: 0 auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-}
-.calculator input{
-  width: 90%;
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 40px;
-  font-weight: 500;
-  text-align: right;
-  color: palevioletred;
-  background-color: aqua;
-  border-radius: 20px;
-}
-.calculator button{
-  width: 85px;
-  height: 48px;
-  margin: 10px;
-  font-size: 28px;
-  color: aqua;
-  background-color: palevioletred;
-  border-radius: 20px;
-}  
-.end{
-  padding: 80px;
-}
-
-</style>
+<html lang="en">
 <head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="calculator.css" rel="stylesheet">
 </head>
 <body>
   <div class="header">
@@ -100,29 +51,9 @@
         <p>Powered by Aacraj Tech</p>
         </div>
   </div>
-        <script>
-        let input = document.getElementById('input')
         
-        function handleButtonPress(value){
-          input.value += value;
-        }
-        function calculate(){
-          try {
-            const result = eval(input.value);
-            input.value = result;
-          } catch (error) {
-              input.value = 'Error';
-          }
-        }
-        function clearInput(){
-          input.value = '';
-        }
-        function del(){
-          input.value = input.value.slice(0,-1)
-        }
-    
-        </script>
+  <script src="calculator.js"></script>
    
-   
+
 </body>
 </html>
